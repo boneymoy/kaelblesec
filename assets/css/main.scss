@@ -1,0 +1,314 @@
+---
+# required front matter so Jekyll processes this
+---
+
+/* 1) Import Minima base */
+@import "minima";
+
+/* 2) Obsidian-like dark theme variables */
+$bg:            #1E1E1E;
+$surface:       #262626;
+$text:          #D4D4D4;
+$text-muted:    #A0A0A0;
+$accent:        #CFFF04;  /* rgb(207,255,4) */
+$accent-hover:  #E5FF4C;
+$code-bg:       #2B2B2B;
+$border:        #333;
+
+/* ============================= */
+/* GLOBAL */
+/* ============================= */
+
+html,
+body {
+  background-color: $bg;
+  color: $text;
+}
+
+/* links */
+a {
+  color: $accent;
+}
+a:hover {
+  color: $accent-hover;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.site-header {
+  background: $surface;                 /* leicht heller als Hintergrund */
+  border-bottom: 1px solid $border;
+}
+
+/* Alle Links & Texte im Header lesbar machen */
+.site-header a,
+.site-header .site-title,
+.site-header .site-title:visited,
+.site-header .site-nav .page-link {
+  color: $text !important;
+}
+
+.site-header a:hover,
+.site-header .site-nav .page-link:hover {
+  color: $accent !important;
+}
+
+/* Burger-Menü-Icon (mobil) */
+.site-nav .menu-icon > svg {
+  fill: $text;
+}
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+
+.wrapper {
+  background: $bg;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  color: $text;
+}
+
+/* metadata */
+.post-meta {
+  color: $text-muted;
+}
+
+/* lists of posts on front page */
+.post-list > li {
+  border-bottom: 1px solid $border;
+}
+
+/* blockquotes */
+blockquote {
+  border-left: 4px solid $accent;
+  color: $text-muted;
+}
+
+/* horizontal line */
+hr {
+  border-color: $border;
+}
+
+/* ============================= */
+/* CODE BLOCKS */
+/* ============================= */
+
+pre,
+code {
+  background: $code-bg;
+  color: $text;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 0.8rem;
+  border: 1px solid $border;
+  overflow-x: auto;
+}
+
+/* inline code */
+code {
+  padding: 0.2rem 0.4rem;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+.site-footer {
+  background: $surface;
+  border-top: 1px solid $border;
+  color: $text-muted;
+}
+
+.site-footer a {
+  color: $accent;
+}
+.site-footer a:hover {
+  color: $accent-hover;
+}
+
+/* ============================= */
+/* BUTTONS & FORM FIELDS */
+/* ============================= */
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: $accent;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  background: $accent-hover;
+}
+
+/* Input-Felder ans Dark Theme anpassen */
+input,
+textarea,
+select {
+  background-color: $surface;
+  color: $text;
+  border: 1px solid $border;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: $accent;
+  box-shadow: 0 0 0 1px rgba(207, 255, 4, 0.3);
+}
+
+/* Placeholder-Farbe */
+input::placeholder,
+textarea::placeholder {
+  color: $text-muted;
+}
+
+/* ============================= */
+/* ROOT LANGUAGE SELECTOR */
+/* ============================= */
+
+.language-selector {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-card {
+  background: rgba(38, 38, 38, 0.9); /* surface-ish */
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 2.5rem 2.75rem;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.language-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent;
+}
+
+.language-subtitle {
+  margin: 0 0 2rem;
+  color: $text-muted;
+  font-size: 0.95rem;
+}
+
+.language-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid $accent;
+  background: transparent;
+  color: $text;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition:
+    background 0.15s ease-out,
+    transform 0.1s ease-out,
+    box-shadow 0.15s ease-out,
+    border-color 0.15s ease-out,
+    color 0.15s ease-out;
+}
+
+.lang-btn:hover {
+  background: $accent;
+  color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(207, 255, 4, 0.18);
+  border-color: $accent-hover;
+}
+
+.lang-code {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.lang-label {
+  font-size: 0.85rem;
+  text-transform: none;
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* INLINE LANG SWITCHER */
+/* ============================= */
+
+.inline-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(38, 38, 38, 0.9);
+  border: 1px solid $border;
+}
+
+.inline-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $text-muted;
+  cursor: pointer;
+  transition:
+    background 0.15s ease-out,
+    color 0.15s ease-out;
+}
+
+.inline-lang:hover {
+  color: $accent;
+}
+
+.inline-lang.active {
+  background: $accent;
+  color: #000;
+  font-weight: 600;
+}
+
+/* legacy .lang-switcher link styling still ok */
+.lang-switcher a {
+  color: $accent;
+}
+.lang-switcher a:hover {
+  color: $accent-hover;
+}

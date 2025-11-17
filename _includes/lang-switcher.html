@@ -1,0 +1,12 @@
+<div class="inline-lang-switcher">
+  {% if page.lang == "en" %}
+    <span class="inline-lang active">EN</span>
+    <a href="{{ page.url | replace:'/en/', '/de/' }}" class="inline-lang">DE</a>
+  {% elsif page.lang == "de" %}
+    <a href="{{ page.url | replace:'/de/', '/en/' }}" class="inline-lang">EN</a>
+    <span class="inline-lang active">DE</span>
+  {% else %}
+    <a href="/en/" class="inline-lang">EN</a>
+    <a href="/de/" class="inline-lang">DE</a>
+  {% endif %}
+</div>

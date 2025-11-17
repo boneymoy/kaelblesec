@@ -1,0 +1,67 @@
+---
+# this front matter tells Jekyll to process the file
+---
+
+/* Import minima’s base styles */
+@import "minima";
+
+/* DARK MODE OVERRIDES */
+
+html, body {
+  background-color: #111 !important;
+  color: #eee !important;
+}
+
+/* Links */
+a {
+  color: #88c0d0;
+}
+
+a:hover {
+  color: #a2d8e5;
+}
+
+/* Header */
+.site-header {
+  background: #111;
+  border-bottom: 1px solid #333;
+}
+
+.site-title, .site-title:visited {
+  color: #ffffff !important;
+}
+
+/* Footer */
+.site-footer {
+  background: #111;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+/* Posts */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0 !important;
+}
+
+.post-title,
+.page-title {
+  color: #fff !important;
+}
+
+code, pre {
+  background: #222;
+  color: #eee;
+}
+
+/* Navigation menu */
+.site-nav .page-link {
+  color: #eee;
+}
+.site-nav .page-link:hover {
+  color: #fff;
+}
+
+/* Horizontal rules */
+hr {
+  border-color: #333;
+}
