@@ -22,9 +22,9 @@ title: kaelblesec
 email: info@kaelble24.de
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://boneymoy.github.io/kaelblesec" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
-github_username:  boneymoy
+url: "https://kaelble24.de" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username:
+github_username:
 
 # Build settings
 theme: minima
